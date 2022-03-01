@@ -1,0 +1,44 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+div{
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+div img{
+    width: 100%;
+    transition: all 3s ease;
+}
+
+h1{
+    z-index: 5;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    left: 30%;
+}
+
+img:hover {
+    transform: scale(1.2, 1.2);
+    filter: grayscale(50%);
+}
+
+img:hover + h1{
+    animation: move 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move{
+    from {top: 100%;}
+    to {top: 50%;}
+}
+
